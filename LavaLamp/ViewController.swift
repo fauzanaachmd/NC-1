@@ -17,24 +17,33 @@ class ViewController: UIViewController {
     let bgColor: [UIColor] = [#colorLiteral(red: 0.003921568627, green: 0.1921568627, blue: 0.7176470588, alpha: 1), #colorLiteral(red: 0, green: 0.7843137255, blue: 0.7803921569, alpha: 1), #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1), #colorLiteral(red: 1, green: 0.8196078431, blue: 0.4, alpha: 1), #colorLiteral(red: 0.8980392157, green: 0.3882352941, blue: 0.6, alpha: 1)]
     var bgColorIndex: Int = 0
     var outBgColorIndex: Int = 0
+    var timerTest: Timer?
     
     override func viewWillAppear(_ animated: Bool) {
         circleOneView.layer.cornerRadius = circleOneView.frame.size.width/2
         circleTwoView.layer.cornerRadius = circleTwoView.frame.size.width/2
         circleThreeView.layer.cornerRadius = circleThreeView.frame.size.width/2
         
-        _ = Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(randomSize), userInfo: nil, repeats: false)
-        
-        _ = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(randomSize), userInfo: nil, repeats: true)
+        if timerTest == nil {
+            timerTest = Timer.scheduledTimer(timeInterval: TimeInterval(0), target: self, selector: #selector(ViewController.randomSize), userInfo: nil, repeats: false)
+            
+            timerTest = Timer.scheduledTimer(timeInterval: TimeInterval(8.0), target: self, selector: #selector(ViewController.randomSize), userInfo: nil, repeats: true)
+        }
         
         bgColorIndex = bgColor.count - 1
         
         UIView.appearance().backgroundColor = UIColor.white
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimerTest()
+        print("dissapear light view")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UITabBar.appearance().backgroundColor = UIColor.white
     }
 
     @objc func randomSize() {
@@ -86,6 +95,13 @@ class ViewController: UIViewController {
             self.outBgColorIndex = 0
         } else {
             self.outBgColorIndex += 1
+        }
+    }
+    
+    func stopTimerTest() {
+        if timerTest != nil {
+            timerTest!.invalidate()
+            timerTest = nil
         }
     }
 
