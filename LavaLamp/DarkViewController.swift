@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DarkViewController.swift
 //  LavaLamp
 //
 //  Created by Fauzan Achmad on 20/05/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DarkViewController: UIViewController {
     
     @IBOutlet weak var circleOneView: UIView!
     @IBOutlet weak var circleTwoView: UIView!
@@ -23,20 +23,38 @@ class ViewController: UIViewController {
         circleTwoView.layer.cornerRadius = circleTwoView.frame.size.width/2
         circleThreeView.layer.cornerRadius = circleThreeView.frame.size.width/2
         
+        // CIRCLE ONE SHADOW CONFIGURATION
+        circleOneView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        circleOneView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        circleOneView.layer.shadowOpacity = 50
+        circleOneView.layer.shadowRadius = 10
+        
+        // CIRCLE TWO SHADOW CONFIGURATION
+        circleTwoView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        circleTwoView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        circleTwoView.layer.shadowOpacity = 50
+        circleTwoView.layer.shadowRadius = 10
+        
+        // CIRCLE THREE SHADOW CONFIGURATION
+        circleThreeView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        circleThreeView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        circleThreeView.layer.shadowOpacity = 50
+        circleThreeView.layer.shadowRadius = 10
+        
         _ = Timer.scheduledTimer(timeInterval: 0, target: self, selector: #selector(randomSize), userInfo: nil, repeats: false)
         
         _ = Timer.scheduledTimer(timeInterval: 8.0, target: self, selector: #selector(randomSize), userInfo: nil, repeats: true)
         
         bgColorIndex = bgColor.count - 1
         
-        UIView.appearance().backgroundColor = UIColor.white
+        UIView.appearance().backgroundColor = UIColor.black
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @objc func randomSize() {
         // RANDOM WIDTH AND HEIGHT 1
         let randomWidth = CGFloat.random(in: 200...500)
@@ -70,16 +88,28 @@ class ViewController: UIViewController {
             self.circleOneView.frame = CGRect(x: randomX, y: randomY, width: randomWidth, height: randomHeight)
             self.circleOneView.layer.cornerRadius = CGFloat(randomRadius)
             self.circleOneView.backgroundColor = self.bgColor[self.outBgColorIndex]
+            self.circleOneView.layer.shadowOffset = CGSize(width: 0, height: 2)
+            self.circleOneView.layer.shadowColor = self.bgColor[self.outBgColorIndex].cgColor
+            self.circleOneView.layer.shadowOpacity = 50
+            self.circleOneView.layer.shadowRadius = 10
             
             // CIRCLE TWO VIEW ANIMATION
             self.circleTwoView.frame = CGRect(x: randomX2, y: randomY2, width: randomWidth2, height: randomHeight2)
             self.circleTwoView.layer.cornerRadius = CGFloat(randomRadius2)
             self.circleTwoView.backgroundColor = self.bgColor[self.outBgColorIndex]
+            self.circleTwoView.layer.shadowOffset = CGSize(width: 0, height: 2)
+            self.circleTwoView.layer.shadowColor = self.bgColor[self.outBgColorIndex].cgColor
+            self.circleTwoView.layer.shadowOpacity = 50
+            self.circleTwoView.layer.shadowRadius = 10
             
             // CIRCLE THREE VIEW ANIMATION
             self.circleThreeView.frame = CGRect(x: randomX3, y: randomY3, width: randomWidth3, height: randomHeight3)
             self.circleThreeView.layer.cornerRadius = CGFloat(randomRadius3)
             self.circleThreeView.backgroundColor = self.bgColor[self.outBgColorIndex]
+            self.circleThreeView.layer.shadowOffset = CGSize(width: 0, height: 2)
+            self.circleThreeView.layer.shadowColor = self.bgColor[self.outBgColorIndex].cgColor
+            self.circleThreeView.layer.shadowOpacity = 50
+            self.circleThreeView.layer.shadowRadius = 10
         })
         
         if self.outBgColorIndex == self.bgColorIndex {
@@ -89,5 +119,14 @@ class ViewController: UIViewController {
         }
     }
 
-}
+    /*
+    // MARK: - Navigation
 
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

@@ -12,6 +12,7 @@
 		D487CEEF229270C2008BDCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D487CEED229270C2008BDCEB /* Main.storyboard */; };
 		D487CEF1229270C4008BDCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D487CEF0229270C4008BDCEB /* Assets.xcassets */; };
 		D487CEF4229270C4008BDCEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D487CEF2229270C4008BDCEB /* LaunchScreen.storyboard */; };
+		D4DB77C42292EF390035C878 /* DarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DB77C32292EF390035C878 /* DarkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D487CEF0229270C4008BDCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D487CEF3229270C4008BDCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D487CEF5229270C4008BDCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4DB77C32292EF390035C878 /* DarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D487CEF0229270C4008BDCEB /* Assets.xcassets */,
 				D487CEF2229270C4008BDCEB /* LaunchScreen.storyboard */,
 				D487CEF5229270C4008BDCEB /* Info.plist */,
+				D4DB77C32292EF390035C878 /* DarkViewController.swift */,
 			);
 			path = LavaLamp;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D487CEEC229270C2008BDCEB /* ViewController.swift in Sources */,
+				D4DB77C42292EF390035C878 /* DarkViewController.swift in Sources */,
 				D487CEEA229270C2008BDCEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5HFU96D3;
 				INFOPLIST_FILE = LavaLamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC5HFU96D3;
 				INFOPLIST_FILE = LavaLamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
