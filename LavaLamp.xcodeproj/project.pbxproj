@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D44ADCFA229B04AB005C0A9B /* Pixelated_Autumn_Leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44ADCF9229B04AB005C0A9B /* Pixelated_Autumn_Leaves.mp3 */; };
 		D487CEEA229270C2008BDCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487CEE9229270C2008BDCEB /* AppDelegate.swift */; };
 		D487CEEC229270C2008BDCEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487CEEB229270C2008BDCEB /* ViewController.swift */; };
 		D487CEEF229270C2008BDCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D487CEED229270C2008BDCEB /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D44ADCF9229B04AB005C0A9B /* Pixelated_Autumn_Leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pixelated_Autumn_Leaves.mp3; sourceTree = "<group>"; };
 		D487CEE6229270C2008BDCEB /* LavaLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LavaLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D487CEE9229270C2008BDCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D487CEEB229270C2008BDCEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D487CEF0229270C4008BDCEB /* Assets.xcassets */,
 				D487CEF2229270C4008BDCEB /* LaunchScreen.storyboard */,
 				D487CEF5229270C4008BDCEB /* Info.plist */,
+				D44ADCF9229B04AB005C0A9B /* Pixelated_Autumn_Leaves.mp3 */,
 				D4DB77C32292EF390035C878 /* DarkViewController.swift */,
 			);
 			path = LavaLamp;
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D487CEF4229270C4008BDCEB /* LaunchScreen.storyboard in Resources */,
+				D44ADCFA229B04AB005C0A9B /* Pixelated_Autumn_Leaves.mp3 in Resources */,
 				D487CEF1229270C4008BDCEB /* Assets.xcassets in Resources */,
 				D487CEEF229270C2008BDCEB /* Main.storyboard in Resources */,
 			);
