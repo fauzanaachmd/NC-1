@@ -14,7 +14,7 @@ class DarkViewController: UIViewController {
     @IBOutlet weak var circleTwoView: UIView!
     @IBOutlet weak var circleThreeView: UIView!
     
-    let bgColor: [UIColor] = [#colorLiteral(red: 0.003921568627, green: 0.1921568627, blue: 0.7176470588, alpha: 1), #colorLiteral(red: 0, green: 0.7843137255, blue: 0.7803921569, alpha: 1), #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1), #colorLiteral(red: 1, green: 0.8196078431, blue: 0.4, alpha: 1), #colorLiteral(red: 0.8980392157, green: 0.3882352941, blue: 0.6, alpha: 1)]
+    let bgColor: [UIColor] = [#colorLiteral(red: 0.7960784314, green: 0.9098039216, blue: 0.5882352941, alpha: 1), #colorLiteral(red: 0, green: 0.7843137255, blue: 0.7803921569, alpha: 1), #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1), #colorLiteral(red: 1, green: 0.8196078431, blue: 0.4, alpha: 1), #colorLiteral(red: 0.8980392157, green: 0.3882352941, blue: 0.6, alpha: 1)]
     var bgColorIndex: Int = 0
     var outBgColorIndex: Int = 0
     var timerTest: Timer?
